@@ -1,0 +1,37 @@
+#pragma once
+#include<iostream>
+#include<string>
+using namespace std;
+class Antique
+{
+private:
+	string name;
+	float spe;
+public:
+	float Volume(float a, float b, float c);
+	float Volume(float r, float h);
+};
+#include"Antique.h"
+#include<iostream>
+#include<string>
+#define PI 3.14
+using namespace std;
+float Antique::Volume(float a, float b, float c)
+{
+	return a * b * c;
+}
+float Antique::Volume(float r, float h)
+{
+	return PI * r * r * h;
+}
+#include"Antique.h"
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	Antique p1, p2;
+	cout << "莲鹤方壶的体积是：" << p1.Volume(30.5, 54.0, 126.5) << "贾湖骨笛的体积是：" << p2.Volume(2.0, 23.1) << endl;
+	system("pause");
+	return 0;
+}
